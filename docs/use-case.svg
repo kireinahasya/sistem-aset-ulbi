@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 484" width="1060" height="484" role="img" aria-labelledby="title desc">
+  <title id="title">Use Case Diagram Sistem Aset Kampus ULBI</title>
+  <desc id="desc">Pemohon dan Admin dapat masuk ke sistem. Pemohon melihat katalog dan kalender, mencari rekomendasi, mengajukan peminjaman, dan melihat status serta riwayat. Admin melihat dasbor, mengelola ruang dan sarana, meninjau pengajuan, mencatat pengembalian dan kondisi, serta melihat laporan.</desc>
+  <rect width="1060" height="484" fill="#ffffff"/>
+  <rect x="155" y="18" width="750" height="447" rx="8" fill="#f5f7fb" stroke="#8796b4" stroke-width="1.5"/>
+
+  <g fill="none" stroke="#61718b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M120 274 L190 100 H451 M940 274 L870 100 H609"/>
+    <path d="M120 274 L226 166 M120 274 L226 229 M120 274 L226 292 M120 274 L226 355 M120 274 L226 418"/>
+    <path d="M940 274 L834 166 M940 274 L834 229 M940 274 L834 292 M940 274 L834 355 M940 274 L834 418"/>
+  </g>
+
+  <g fill="#ffffff" stroke="#526994" stroke-width="1.5">
+    <ellipse cx="530" cy="100" rx="79" ry="23"/>
+    <ellipse cx="363" cy="166" rx="137" ry="23"/>
+    <ellipse cx="363" cy="229" rx="137" ry="23"/>
+    <ellipse cx="363" cy="292" rx="137" ry="23"/>
+    <ellipse cx="363" cy="355" rx="137" ry="23"/>
+    <ellipse cx="363" cy="418" rx="137" ry="23"/>
+    <ellipse cx="697" cy="166" rx="137" ry="23"/>
+    <ellipse cx="697" cy="229" rx="137" ry="23"/>
+    <ellipse cx="697" cy="292" rx="137" ry="23"/>
+    <ellipse cx="697" cy="355" rx="137" ry="23"/>
+    <ellipse cx="697" cy="418" rx="137" ry="23"/>
+  </g>
+
+  <g fill="none" stroke="#20356a" stroke-width="2.5" stroke-linecap="round">
+    <circle cx="92" cy="247" r="11"/>
+    <path d="M92 258 V291 L76 311 M92 291 L108 311 M64 274 H120"/>
+    <circle cx="968" cy="247" r="11"/>
+    <path d="M968 258 V291 L952 311 M968 291 L984 311 M940 274 H996"/>
+  </g>
+
+  <g fill="#20356a" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">
+    <text x="530" y="49" font-size="20" font-weight="700">Sistem Aset Kampus ULBI</text>
+    <text x="92" y="342" font-weight="700">Pemohon</text>
+    <text x="968" y="342" font-weight="700">Admin</text>
+    <text x="530" y="106">Masuk</text>
+    <text x="363" y="172">Lihat katalog ruang dan sarana</text>
+    <text x="363" y="235">Lihat kalender ketersediaan</text>
+    <text x="363" y="298">Cari rekomendasi ruang</text>
+    <text x="363" y="361">Ajukan peminjaman</text>
+    <text x="363" y="424">Lihat status dan riwayat</text>
+    <text x="697" y="172">Lihat dasbor</text>
+    <text x="697" y="235">Kelola ruang dan sarana</text>
+    <text x="697" y="298">Tinjau pengajuan</text>
+    <text x="697" y="361">Catat pengembalian dan kondisi</text>
+    <text x="697" y="424">Lihat laporan</text>
+  </g>
+</svg>
