@@ -62,7 +62,7 @@
 
 a:focus-visible,
 .btn:focus-visible,
-.availability:focus-visible {
+.availability-heading h2:focus-visible {
     outline: 3px solid #2055a1;
     outline-offset: 4px;
 }
@@ -113,7 +113,6 @@ a:focus-visible,
     margin-bottom: 3rem;
     padding-top: clamp(1.15rem, 3vw, 2rem);
     border-top: 1px solid var(--border);
-    scroll-margin-top: 1rem;
 }
 
 .availability-heading,
@@ -135,6 +134,7 @@ a:focus-visible,
     font-size: clamp(1.5rem, 3vw, 2rem);
     font-weight: 800;
     letter-spacing: -.02em;
+    scroll-margin-top: 1rem;
 }
 
 .demo-label,

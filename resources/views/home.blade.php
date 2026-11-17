@@ -17,9 +17,9 @@
             </div>
         </section>
 
-        <section class="availability" id="jadwal-stok" aria-labelledby="judul-ketersediaan" tabindex="-1">
+        <section class="availability" aria-labelledby="jadwal-stok">
             <header class="availability-heading">
-                <h2 id="judul-ketersediaan">Jadwal dan stok</h2>
+                <h2 id="jadwal-stok" tabindex="-1">Jadwal dan stok</h2>
                 <span class="demo-label">Data demo</span>
             </header>
 
