@@ -1,0 +1,219 @@
+@font-face {
+    font-family: "DM Sans";
+    src: url("../vendor/dm-sans/dm-sans.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 100 1000;
+    font-display: swap;
+}
+
+:root {
+    --ulbi-blue: #1f3573;
+    --ulbi-orange: #e8562c;
+    --border: #dbe1e9;
+    --secondary-text: #4f5c6e;
+    --bs-body-bg: #f4f6f9;
+    --bs-body-color: #202a39;
+    --bs-body-font-family: "DM Sans", system-ui, sans-serif;
+}
+
+.container-xl {
+    --bs-gutter-x: clamp(2rem, 6vw, 4rem);
+}
+
+.site-header {
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+}
+
+.site-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: clamp(.75rem, 3vw, 1.5rem);
+    min-height: 4.5rem;
+    color: var(--ulbi-blue);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.site-brand img {
+    width: clamp(6.25rem, 23vw, 9rem);
+    height: auto;
+}
+
+.site-brand span {
+    border-left: 2px solid var(--ulbi-orange);
+    padding-left: clamp(.75rem, 3vw, 1.5rem);
+}
+
+.skip-link {
+    position: absolute;
+    z-index: 1;
+    left: 1rem;
+    top: .5rem;
+    padding: .6rem .9rem;
+    background: #fff;
+    color: var(--ulbi-blue);
+    transform: translateY(-180%);
+}
+
+.skip-link:focus {
+    transform: none;
+}
+
+a:focus-visible,
+.btn:focus-visible,
+.availability:focus-visible {
+    outline: 3px solid #2055a1;
+    outline-offset: 4px;
+}
+
+.hero {
+    padding-block: clamp(1.5rem, 5vw, 4rem);
+}
+
+.hero h1 {
+    max-width: 15ch;
+    margin-bottom: 1rem;
+    color: var(--ulbi-blue);
+    font-size: clamp(2.1rem, 4.7vw, 4.125rem);
+    font-weight: 800;
+    letter-spacing: -.045em;
+    line-height: 1.06;
+}
+
+.hero p {
+    max-width: 35ch;
+    margin-bottom: 1.25rem;
+    color: var(--secondary-text);
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.hero .btn-primary {
+    --bs-btn-bg: var(--ulbi-blue);
+    --bs-btn-border-color: var(--ulbi-blue);
+    --bs-btn-hover-bg: #162756;
+    --bs-btn-hover-border-color: #162756;
+    --bs-btn-active-bg: #162756;
+    --bs-btn-active-border-color: #162756;
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding-inline: 1rem;
+    font-weight: 700;
+}
+
+.campus-photo {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: .5rem;
+}
+
+.availability {
+    margin-bottom: 3rem;
+    padding-top: clamp(1.15rem, 3vw, 2rem);
+    border-top: 1px solid var(--border);
+    scroll-margin-top: 1rem;
+}
+
+.availability-heading,
+.asset-heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: space-between;
+    gap: .5rem 1rem;
+}
+
+.availability-heading {
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.availability-heading h2 {
+    margin: 0;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 800;
+    letter-spacing: -.02em;
+}
+
+.demo-label,
+.asset-status {
+    display: inline-block;
+    padding: .25rem .5rem;
+    border-radius: .25rem;
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+.demo-label {
+    background: #e5ecfa;
+    color: var(--ulbi-blue);
+}
+
+.availability-panel {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: .5rem;
+}
+
+.panel-heading,
+.asset-entry {
+    padding: .9rem clamp(.9rem, 3vw, 1.5rem);
+}
+
+.panel-heading {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 800;
+}
+
+.asset-entry {
+    border-top: 1px solid var(--border);
+}
+
+.asset-entry h4 {
+    margin: 0;
+    font-size: 1.06rem;
+    font-weight: 750;
+}
+
+.asset-detail {
+    margin: .2rem 0 0;
+    color: var(--secondary-text);
+    font-size: .875rem;
+}
+
+.asset-values {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem 1.75rem;
+    margin: .7rem 0 0;
+}
+
+.asset-values dt {
+    color: var(--secondary-text);
+    font-size: .875rem;
+    font-weight: 550;
+}
+
+.asset-values dd {
+    margin: 0;
+    font-weight: 750;
+    font-variant-numeric: tabular-nums;
+}
+
+.status-conflict {
+    color: #852b33;
+    background: #fce7e8;
+}
+
+.status-available {
+    color: #20553a;
+    background: #e0f0e5;
+}
+
+.status-low {
+    color: #6f4608;
+    background: #fff0d2;
+}
