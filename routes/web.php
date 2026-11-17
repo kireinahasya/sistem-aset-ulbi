@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'home', [
+$availabilityDemo = [
     'rooms' => [
         [
             'name' => 'Ruang A',
@@ -29,4 +29,7 @@ Route::view('/', 'home', [
         'requested' => 4,
         'available' => 2,
     ],
-])->name('home');
+];
+
+Route::view('/', 'home', $availabilityDemo)->name('home');
+Route::view('/jadwal-stok', 'availability', $availabilityDemo)->name('availability');

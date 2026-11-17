@@ -115,6 +115,19 @@ a:focus-visible,
     border-top: 1px solid var(--border);
 }
 
+.availability-page {
+    padding-block: clamp(1rem, 4vw, 3rem) 3rem;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    color: var(--ulbi-blue);
+    font-weight: 700;
+    text-underline-offset: .2em;
+}
+
 .availability-heading,
 .asset-heading {
     display: flex;
@@ -135,6 +148,18 @@ a:focus-visible,
     font-weight: 800;
     letter-spacing: -.02em;
     scroll-margin-top: 1rem;
+}
+
+.availability-page-heading {
+    margin-top: .65rem;
+}
+
+.availability-page-heading h1 {
+    margin: 0;
+    color: var(--ulbi-blue);
+    font-size: clamp(2rem, 4.7vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -.035em;
 }
 
 .demo-label,
@@ -172,7 +197,7 @@ a:focus-visible,
     border-top: 1px solid var(--border);
 }
 
-.asset-entry h4 {
+.asset-name {
     margin: 0;
     font-size: 1.06rem;
     font-weight: 750;
