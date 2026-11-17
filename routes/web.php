@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RoomCatalogController;
 use Illuminate\Support\Facades\Route;
 
 $availabilityDemo = [
@@ -33,4 +34,6 @@ $availabilityDemo = [
 ];
 
 Route::get('/', HomeController::class)->name('home');
+Route::get('/ruangan', [RoomCatalogController::class, 'index'])->name('rooms.index');
+Route::get('/ruangan/{room}', [RoomCatalogController::class, 'show'])->name('rooms.show');
 Route::view('/jadwal-stok', 'availability', $availabilityDemo)->name('availability');

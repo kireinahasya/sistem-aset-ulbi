@@ -26,6 +26,7 @@ Jika proyek sudah tersiapkan, jalankan `php artisan serve` dari folder proyek. B
 | Halaman | Yang bisa dicoba |
 | --- | --- |
 | Beranda (`/`) | Pilih tanggal di kalender untuk melihat slot ruang. Isi jam, jumlah peserta, dan kebutuhan fasilitas untuk mendapat rekomendasi ruang. |
+| Katalog ruangan (`/ruangan`) | Bandingkan kapasitas ruang, lalu buka detail untuk melihat fasilitas bawaan. Nama ruang di kalender dan hasil rekomendasi juga membuka detail. |
 | Jadwal dan stok (`/jadwal-stok`) | Lihat contoh jadwal bentrok dan jumlah sarana yang melebihi stok tersedia. |
 
 Coba cari ruang pada **17 November 2026**, pukul **11.00–12.00 WIB**, untuk **35 orang** dengan AC dan proyektor. Ruang A muncul di urutan pertama karena tersedia dan menyisakan 5 kursi. Jadwal, ruangan, dan stok dalam prototipe ini menggunakan data contoh. Konfigurasi lokal menggunakan SQLite untuk menjalankan Laravel. MySQL direncanakan untuk tahap penyimpanan transaksi.

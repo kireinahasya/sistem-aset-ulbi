@@ -66,7 +66,7 @@
                 <ol>
                     @foreach ($recommendations as $room)
                         <li>
-                            <strong>{{ $room['name'] }}</strong>
+                            <strong><a class="room-detail-link" href="{{ route('rooms.show', $room['slug']) }}">{{ $room['name'] }}</a></strong>
                             <span>Kapasitas {{ $room['capacity'] }} orang · Sisa {{ $room['spareSeats'] }} kursi</span>
                             <span class="asset-detail">{{ implode(' · ', array_map(fn ($code) => $facilityLabels[$code], $room['facilities'])) }}</span>
                         </li>

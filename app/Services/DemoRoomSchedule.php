@@ -18,11 +18,11 @@ final class DemoRoomSchedule
     ];
 
     private const ROOMS = [
-        ['name' => 'Ruang A', 'capacity' => 40, 'facilities' => ['ac', 'proyektor']],
-        ['name' => 'Ruang B', 'capacity' => 50, 'facilities' => ['ac', 'proyektor', 'papan-tulis']],
-        ['name' => 'Ruang C', 'capacity' => 24, 'facilities' => ['ac', 'papan-tulis']],
-        ['name' => 'Ruang D', 'capacity' => 80, 'facilities' => ['ac', 'proyektor', 'sound-system']],
-        ['name' => 'Ruang E', 'capacity' => 60, 'facilities' => ['ac', 'papan-tulis']],
+        ['slug' => 'ruang-a', 'name' => 'Ruang A', 'capacity' => 40, 'facilities' => ['ac', 'proyektor']],
+        ['slug' => 'ruang-b', 'name' => 'Ruang B', 'capacity' => 50, 'facilities' => ['ac', 'proyektor', 'papan-tulis']],
+        ['slug' => 'ruang-c', 'name' => 'Ruang C', 'capacity' => 24, 'facilities' => ['ac', 'papan-tulis']],
+        ['slug' => 'ruang-d', 'name' => 'Ruang D', 'capacity' => 80, 'facilities' => ['ac', 'proyektor', 'sound-system']],
+        ['slug' => 'ruang-e', 'name' => 'Ruang E', 'capacity' => 60, 'facilities' => ['ac', 'papan-tulis']],
     ];
 
     private const WEEKLY_BOOKINGS = [
@@ -53,13 +53,18 @@ final class DemoRoomSchedule
         ],
     ];
 
+    public function rooms(): array
+    {
+        return self::ROOMS;
+    }
+
     public function roomsOn(CarbonImmutable $date): array
     {
         $bookings = self::WEEKLY_BOOKINGS[$date->dayOfWeekIso] ?? [];
 
         return array_map(
             fn (array $room): array => $room + ['slots' => $this->availableSlots($bookings[$room['name']] ?? [])],
-            self::ROOMS,
+            $this->rooms(),
         );
     }
 

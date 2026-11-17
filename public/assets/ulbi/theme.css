@@ -25,6 +25,14 @@
     border-bottom: 1px solid var(--border);
 }
 
+.site-header-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 1.5rem;
+}
+
 .site-brand {
     display: inline-flex;
     align-items: center;
@@ -123,6 +131,45 @@ a:focus-visible,
     display: inline-flex;
     align-items: center;
     min-height: 44px;
+    color: var(--ulbi-blue);
+    font-weight: 700;
+    text-underline-offset: .2em;
+}
+
+.site-header [aria-current="page"] {
+    text-decoration-thickness: .15em;
+}
+
+.room-card {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.room-card h2 {
+    margin: 0 0 .4rem;
+    font-size: 1.2rem;
+    font-weight: 750;
+    color: var(--ulbi-blue);
+}
+
+.room-capacity {
+    margin: 0;
+    font-weight: 700;
+}
+
+.room-card-facilities {
+    margin: .5rem 0 .4rem;
+    color: var(--secondary-text);
+    font-size: .9rem;
+}
+
+.room-detail-link {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
     color: var(--ulbi-blue);
     font-weight: 700;
     text-underline-offset: .2em;

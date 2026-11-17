@@ -45,7 +45,7 @@
         @forelse ($availableRooms as $room)
             <li>
                 <div>
-                    <strong>{{ $room['name'] }}</strong>
+                    <a class="room-detail-link" href="{{ route('rooms.show', $room['slug']) }}">{{ $room['name'] }}</a>
                     <span class="asset-detail">{{ $room['capacity'] }} orang</span>
                 </div>
                 <ul class="room-slots" aria-label="Slot kosong {{ $room['name'] }}">
