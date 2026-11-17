@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 $availabilityDemo = [
@@ -31,5 +32,5 @@ $availabilityDemo = [
     ],
 ];
 
-Route::view('/', 'home', $availabilityDemo)->name('home');
+Route::get('/', HomeController::class)->name('home');
 Route::view('/jadwal-stok', 'availability', $availabilityDemo)->name('availability');
