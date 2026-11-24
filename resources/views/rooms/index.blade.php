@@ -6,7 +6,6 @@
     <div class="container-xl availability-page">
         <header class="availability-heading availability-page-heading">
             <h1>Katalog ruangan</h1>
-            <span class="demo-label">Data demo</span>
         </header>
 
         <ul class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3 list-unstyled mb-0">

@@ -8,7 +8,6 @@
 
         <header class="availability-heading availability-page-heading">
             <h1>{{ $room['name'] }}</h1>
-            <span class="demo-label">Data demo</span>
         </header>
 
         <div class="row g-3">

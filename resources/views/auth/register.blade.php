@@ -7,7 +7,6 @@
     <p class="auth-description">Akun Peminjam ditujukan untuk mahasiswa, dosen, dan staf ULBI.</p>
     <form class="auth-form" data-auth-form="register" method="post" action="{{ route('register') }}" novalidate>
         @csrf
-        <p class="search-errors" data-form-error role="alert" hidden></p>
         <div>
             <label class="form-label" for="name">Nama lengkap</label>
             <input class="form-control" id="name" name="name" autocomplete="name" required aria-describedby="name-error">
@@ -47,7 +46,7 @@
                     minlength="8" required aria-describedby="password-help password-error">
                 <button type="button" data-toggle-password="password" aria-controls="password" aria-pressed="false">Tampilkan</button>
             </div>
-            <p class="auth-caption" id="password-help">Gunakan minimal 8 karakter untuk mencoba formulir.</p>
+            <p class="auth-caption" id="password-help">Gunakan minimal 8 karakter.</p>
             <span class="auth-error" id="password-error" data-error-for="password"></span>
         </div>
         <div>
@@ -60,14 +59,13 @@
             </div>
             <span class="auth-error" id="password_confirmation-error" data-error-for="password_confirmation"></span>
         </div>
-        <button class="btn btn-primary auth-submit" type="submit" disabled>Coba registrasi</button>
+        <button class="btn btn-primary auth-submit" type="submit" disabled>Daftar akun</button>
     </form>
 
     <div class="auth-result" data-form-result role="status" tabindex="-1" hidden>
         <h2 data-result-title></h2>
         <p data-result-message></p>
-        <a class="back-link" href="{{ route('login') }}">Coba login dengan akun demo</a>
+        <a class="back-link" href="{{ route('login') }}">Ke halaman masuk</a>
     </div>
     <p class="auth-footer">Sudah punya akun? <a href="{{ route('login') }}">Masuk</a></p>
-    <p class="auth-caption">Formulir ini mendemonstrasikan registrasi. Penyimpanan akun akan tersedia pada tahap backend.</p>
 @endsection

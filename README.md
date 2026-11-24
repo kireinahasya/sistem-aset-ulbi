@@ -43,7 +43,7 @@ Peminjam dapat mengajukan ruangan dan/atau sarana tambahan sesuai waktu serta ju
 | Rekomendasi | Cari berdasarkan waktu, kapasitas, dan fasilitas, lalu urutkan dengan Best-Fit | Tersedia dengan data contoh |
 | Katalog ruangan | Lihat kapasitas dan buka detail fasilitas bawaan | Tersedia dengan data contoh |
 | Contoh keadaan khusus | Jadwal bentrok, stok kurang, validasi pencarian, dan hasil pencarian kosong | Tersedia dengan data contoh |
-| Akun | Registrasi Peminjam, login demo Peminjam/Admin, dan pemulihan kata sandi | Tampilan dan validasi browser tersedia. Autentikasi, penyimpanan akun, dan pengiriman email direncanakan. |
+| Akun | Registrasi Peminjam, login Peminjam/Admin, dan pemulihan kata sandi | Tampilan dan validasi browser tersedia. Formulir menampilkan status layanan belum tersedia setelah isian valid. Autentikasi, penyimpanan akun, dan pengiriman email direncanakan. |
 | Katalog sarana | Lihat jenis sarana, stok, dan kondisi | Direncanakan |
 | Pengajuan | Formulir kegiatan, waktu, aset, jumlah unit, dan lampiran | Direncanakan |
 | Status dan riwayat | Pantau keputusan dan peminjaman sendiri, baca alasan penolakan, serta ajukan kembali | Direncanakan |
@@ -117,7 +117,7 @@ Jika proyek sudah tersiapkan, jalankan `php artisan serve` dari folder proyek, l
 
 Untuk mencoba rekomendasi, pilih **17 November 2026**, pukul **11.00–12.00 WIB**, untuk **35 peserta**, dengan fasilitas **AC dan proyektor**. Ruang A muncul pertama dengan sisa kapasitas 5 kursi.
 
-Pada halaman masuk, pilih peran lalu klik **Isi akun demo** untuk mencoba validasi login. Pada registrasi, lengkapi isian untuk melihat contoh validasi dan konfirmasi. Formulir akun menggunakan JavaScript untuk simulasi dan data yang diketik hanya diproses di halaman tersebut.
+Pada halaman masuk, pilih peran dan isi email serta kata sandi. Pada registrasi, lengkapi identitas dan konfirmasi kata sandi. Formulir memvalidasi isian di browser. Setelah isian valid, pesan status menjelaskan bahwa layanan akun belum tersedia. Formulir memproses data di halaman tersebut. Autentikasi dan pembuatan akun menjadi tahap implementasi berikutnya.
 
 ## Dokumentasi rancangan
 

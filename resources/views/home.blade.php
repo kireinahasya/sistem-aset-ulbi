@@ -23,7 +23,6 @@
         <section class="availability" aria-labelledby="jadwal-stok">
             <header class="availability-heading">
                 <h2 id="jadwal-stok" tabindex="-1">Temukan ruangan</h2>
-                <span class="demo-label">Data demo</span>
             </header>
 
             <div class="row g-4">

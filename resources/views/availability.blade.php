@@ -8,7 +8,6 @@
 
         <header class="availability-heading availability-page-heading">
             <h1>Jadwal dan stok</h1>
-            <span class="demo-label">Data demo</span>
         </header>
 
         @include('partials.availability-panels', ['panelHeadingLevel' => 2])

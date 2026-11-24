@@ -209,18 +209,12 @@ a:focus-visible,
     letter-spacing: -.035em;
 }
 
-.demo-label,
 .asset-status {
     display: inline-block;
     padding: .25rem .5rem;
     border-radius: .25rem;
     font-size: .8rem;
     font-weight: 700;
-}
-
-.demo-label {
-    background: #e5ecfa;
-    color: var(--ulbi-blue);
 }
 
 .availability-panel {
@@ -622,31 +616,6 @@ a:focus-visible,
     color: #fff;
 }
 
-.auth-demo-info {
-    padding: .8rem 1rem;
-    margin-bottom: 1.25rem;
-    border-radius: .375rem;
-    background: #eaf0fb;
-}
-
-.auth-demo-info p {
-    margin: 0;
-    color: var(--secondary-text);
-    font-size: .875rem;
-}
-
-.auth-text-button {
-    min-height: 44px;
-    padding: .25rem 0;
-    border: 0;
-    background: transparent;
-    color: var(--ulbi-blue);
-    font-weight: 700;
-    text-align: left;
-    text-decoration: underline;
-    text-underline-offset: .2em;
-}
-
 .auth-form {
     display: grid;
     gap: 1rem;
@@ -711,7 +680,6 @@ a:focus-visible,
 }
 
 .auth-form button:focus-visible,
-.auth-text-button:focus-visible,
 .auth-role-picker button:focus-visible,
 .auth-result:focus-visible {
     outline: 3px solid #2055a1;
@@ -759,10 +727,10 @@ a:focus-visible,
 .auth-result {
     padding: 1rem;
     margin-top: 1.25rem;
-    border: 1px solid #86a995;
+    border: 1px solid #c9a95a;
     border-radius: .375rem;
-    background: #eef7f1;
-    color: #20553a;
+    background: #fff7e5;
+    color: #6f4608;
 }
 
 .auth-result h2 {
