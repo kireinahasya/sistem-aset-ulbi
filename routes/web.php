@@ -34,6 +34,9 @@ $availabilityDemo = [
 ];
 
 Route::get('/', HomeController::class)->name('home');
+Route::view('/masuk', 'auth.login')->name('login');
+Route::view('/daftar', 'auth.register')->name('register');
+Route::view('/lupa-kata-sandi', 'auth.forgot-password')->name('password.request');
 Route::get('/ruangan', [RoomCatalogController::class, 'index'])->name('rooms.index');
 Route::get('/ruangan/{room}', [RoomCatalogController::class, 'show'])->name('rooms.show');
 Route::view('/jadwal-stok', 'availability', $availabilityDemo)->name('availability');

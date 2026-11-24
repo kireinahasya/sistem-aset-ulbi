@@ -1,6 +1,6 @@
 # Alur Prototipe Sistem Aset Kampus ULBI
 
-Beranda, kalender, pencarian ruang, katalog ruangan, dan halaman Jadwal dan Stok sudah bisa dicoba. Diagram berikut menggambarkan alur lengkap yang dituju pada tahap prototipe. Katalog sarana, login, pengajuan, persetujuan, pengembalian, dan laporan masih berupa rancangan layar dengan data contoh.
+Beranda, kalender, pencarian ruang, katalog ruangan, dan halaman Jadwal dan Stok sudah bisa dicoba. Diagram berikut menggambarkan alur lengkap yang dituju pada tahap prototipe. Tampilan registrasi, login dua peran, dan pemulihan kata sandi juga bisa dicoba sebagai simulasi dengan validasi di browser. Katalog sarana, pengajuan, persetujuan, pengembalian, dan laporan masih berupa rancangan layar dengan data contoh.
 
 ## Peran
 

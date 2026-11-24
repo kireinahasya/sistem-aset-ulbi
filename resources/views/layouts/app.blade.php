@@ -21,6 +21,8 @@
             <nav aria-label="Navigasi utama">
                 <a class="back-link" href="{{ route('rooms.index') }}"
                     @if (request()->routeIs('rooms.index')) aria-current="page" @endif>Katalog ruangan</a>
+                <a class="back-link" href="{{ route('login') }}"
+                    @if (request()->routeIs('login')) aria-current="page" @endif>Masuk</a>
             </nav>
         </div>
     </header>
@@ -28,5 +30,6 @@
     <main id="konten" tabindex="-1">
         @yield('content')
     </main>
+    @stack('scripts')
 </body>
 </html>
