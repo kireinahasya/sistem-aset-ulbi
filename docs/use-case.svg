@@ -1,50 +1,66 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 484" width="1060" height="484" role="img" aria-labelledby="title desc">
-  <title id="title">Use Case Diagram Sistem Aset Kampus ULBI</title>
-  <desc id="desc">Pemohon dan Admin dapat masuk ke sistem. Pemohon melihat katalog dan kalender, mencari rekomendasi, mengajukan peminjaman, dan melihat status serta riwayat. Admin melihat dasbor, mengelola ruang dan sarana, meninjau pengajuan, mencatat pengembalian dan kondisi, serta melihat laporan.</desc>
-  <rect width="1060" height="484" fill="#ffffff"/>
-  <rect x="155" y="18" width="750" height="447" rx="8" fill="#f5f7fb" stroke="#8796b4" stroke-width="1.5"/>
-
-  <g fill="none" stroke="#61718b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M120 274 L190 100 H451 M940 274 L870 100 H609"/>
-    <path d="M120 274 L226 166 M120 274 L226 229 M120 274 L226 292 M120 274 L226 355 M120 274 L226 418"/>
-    <path d="M940 274 L834 166 M940 274 L834 229 M940 274 L834 292 M940 274 L834 355 M940 274 L834 418"/>
-  </g>
-
-  <g fill="#ffffff" stroke="#526994" stroke-width="1.5">
-    <ellipse cx="530" cy="100" rx="79" ry="23"/>
-    <ellipse cx="363" cy="166" rx="137" ry="23"/>
-    <ellipse cx="363" cy="229" rx="137" ry="23"/>
-    <ellipse cx="363" cy="292" rx="137" ry="23"/>
-    <ellipse cx="363" cy="355" rx="137" ry="23"/>
-    <ellipse cx="363" cy="418" rx="137" ry="23"/>
-    <ellipse cx="697" cy="166" rx="137" ry="23"/>
-    <ellipse cx="697" cy="229" rx="137" ry="23"/>
-    <ellipse cx="697" cy="292" rx="137" ry="23"/>
-    <ellipse cx="697" cy="355" rx="137" ry="23"/>
-    <ellipse cx="697" cy="418" rx="137" ry="23"/>
-  </g>
-
-  <g fill="none" stroke="#20356a" stroke-width="2.5" stroke-linecap="round">
-    <circle cx="92" cy="247" r="11"/>
-    <path d="M92 258 V291 L76 311 M92 291 L108 311 M64 274 H120"/>
-    <circle cx="968" cy="247" r="11"/>
-    <path d="M968 258 V291 L952 311 M968 291 L984 311 M940 274 H996"/>
-  </g>
-
-  <g fill="#20356a" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">
-    <text x="530" y="49" font-size="20" font-weight="700">Sistem Aset Kampus ULBI</text>
-    <text x="92" y="342" font-weight="700">Pemohon</text>
-    <text x="968" y="342" font-weight="700">Admin</text>
-    <text x="530" y="106">Masuk</text>
-    <text x="363" y="172">Lihat katalog ruang dan sarana</text>
-    <text x="363" y="235">Lihat kalender ketersediaan</text>
-    <text x="363" y="298">Cari rekomendasi ruang</text>
-    <text x="363" y="361">Ajukan peminjaman</text>
-    <text x="363" y="424">Lihat status dan riwayat</text>
-    <text x="697" y="172">Lihat dasbor</text>
-    <text x="697" y="235">Kelola ruang dan sarana</text>
-    <text x="697" y="298">Tinjau pengajuan</text>
-    <text x="697" y="361">Catat pengembalian dan kondisi</text>
-    <text x="697" y="424">Lihat laporan</text>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="660" viewBox="0 0 1200 660" role="img" aria-labelledby="title desc">
+<title id="title">Use Case Diagram Sistem Aset Kampus ULBI</title>
+<desc id="desc">Peminjam mengakses katalog dan detail aset, kalender, rekomendasi, pengajuan serta status dan riwayat sendiri. Admin Logistik mengakses dasbor, pengelolaan ruang dan sarana, persetujuan, pencatatan pengembalian dan kondisi, serta laporan. Kedua peran dapat masuk dan keluar akun.</desc>
+<rect width="1200" height="660" fill="white"/>
+<rect x="175" y="20" width="850" height="600" fill="#f6f8fc" stroke="#8290aa" stroke-width="1.5"/>
+<text x="600" y="55" fill="#1f3573" font-family="Arial,sans-serif" font-size="23" font-weight="700" text-anchor="middle">Sistem Aset Kampus ULBI</text>
+<g fill="none" stroke="#738198" stroke-width="1.5">
+<path d="M134 340 L196 108 H485 M1066 340 L1004 108 H715"/>
+<path d="M134 340 L210 208"/>
+<path d="M134 340 L210 288"/>
+<path d="M134 340 L210 368"/>
+<path d="M134 340 L210 448"/>
+<path d="M134 340 L210 528"/>
+<path d="M1066 340 L990 168"/>
+<path d="M1066 340 L990 248"/>
+<path d="M1066 340 L990 328"/>
+<path d="M1066 340 L990 408"/>
+<path d="M1066 340 L990 488"/>
+<path d="M1066 340 L990 568"/>
+</g>
+<g fill="white" stroke="#526994" stroke-width="1.5">
+<ellipse cx="600" cy="108" rx="115" ry="26"/>
+<ellipse cx="365" cy="208" rx="155" ry="31"/>
+<ellipse cx="365" cy="288" rx="155" ry="31"/>
+<ellipse cx="365" cy="368" rx="155" ry="31"/>
+<ellipse cx="365" cy="448" rx="155" ry="31"/>
+<ellipse cx="365" cy="528" rx="155" ry="31"/>
+<ellipse cx="835" cy="168" rx="155" ry="31"/>
+<ellipse cx="835" cy="248" rx="155" ry="31"/>
+<ellipse cx="835" cy="328" rx="155" ry="31"/>
+<ellipse cx="835" cy="408" rx="155" ry="31"/>
+<ellipse cx="835" cy="488" rx="155" ry="31"/>
+<ellipse cx="835" cy="568" rx="155" ry="31"/>
+</g>
+<g fill="none" stroke="#1f3573" stroke-width="2.5" stroke-linecap="round">
+<circle cx="100" cy="302" r="13"/>
+<path d="M100 315 V365 M66 340 H134 M100 365 L78 394 M100 365 L122 394"/>
+<circle cx="1100" cy="302" r="13"/>
+<path d="M1100 315 V365 M1066 340 H1134 M1100 365 L1078 394 M1100 365 L1122 394"/>
+</g>
+<g fill="#203355" font-family="Arial,sans-serif" font-size="17" text-anchor="middle">
+<text x="600" y="114">Masuk dan keluar akun</text>
+<text x="365" y="205">Lihat katalog dan detail</text>
+<text x="365" y="225">ruangan serta sarana</text>
+<text x="365" y="285">Lihat kalender</text>
+<text x="365" y="305">ketersediaan</text>
+<text x="365" y="365">Cari rekomendasi</text>
+<text x="365" y="385">ruang</text>
+<text x="365" y="445">Ajukan peminjaman</text>
+<text x="365" y="465">ruang dan/atau sarana</text>
+<text x="365" y="525">Lihat status dan</text>
+<text x="365" y="545">riwayat sendiri</text>
+<text x="835" y="174">Lihat dasbor</text>
+<text x="835" y="254">Kelola ruangan</text>
+<text x="835" y="334">Kelola sarana</text>
+<text x="835" y="405">Setujui atau tolak</text>
+<text x="835" y="425">pengajuan</text>
+<text x="835" y="485">Catat pengembalian</text>
+<text x="835" y="505">dan kondisi aset</text>
+<text x="835" y="565">Lihat dan ekspor laporan</text>
+<text x="835" y="585">PDF / Excel</text>
+<text x="100" y="428" font-weight="700">Peminjam</text>
+<text x="1100" y="428" font-weight="700">Admin</text>
+<text x="1100" y="450" font-weight="700">Logistik</text>
+<text x="600" y="647" fill="#4f5c6e" font-size="15">Rancangan aplikasi lengkap · Pengembangan dilakukan bertahap</text>
+</g></svg>

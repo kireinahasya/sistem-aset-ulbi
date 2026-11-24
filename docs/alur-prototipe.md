@@ -47,4 +47,6 @@ Pada pencarian ruang, Best-Fit mengurutkan ruang yang tersedia, memenuhi kebutuh
 
 ## Use Case Diagram
 
+[Rincian aktor, use case, dan skenario peminjaman](use-case.md).
+
 ![Diagram use case untuk Pemohon dan Admin Sistem Aset Kampus ULBI](use-case.svg)
