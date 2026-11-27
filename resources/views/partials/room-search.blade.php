@@ -69,6 +69,13 @@
                             <strong><a class="room-detail-link" href="{{ route('rooms.show', $room['slug']) }}">{{ $room['name'] }}</a></strong>
                             <span>Kapasitas {{ $room['capacity'] }} orang · Sisa {{ $room['spareSeats'] }} kursi</span>
                             <span class="asset-detail">{{ implode(' · ', array_map(fn ($code) => $facilityLabels[$code], $room['facilities'])) }}</span>
+                            <a class="back-link" href="{{ route('borrowings.create', [
+                                'ruangan' => $room['slug'],
+                                'tanggal' => $selectedDate->toDateString(),
+                                'jam_mulai' => $form['jam_mulai'],
+                                'jam_selesai' => $form['jam_selesai'],
+                                'jumlah_peserta' => $form['jumlah_peserta'],
+                            ]) }}">Pilih ruangan ini</a>
                         </li>
                     @endforeach
                 </ol>

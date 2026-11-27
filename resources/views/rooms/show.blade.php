@@ -26,6 +26,7 @@
                 <section class="availability-panel room-card" aria-labelledby="kapasitas-ruangan">
                     <h2 id="kapasitas-ruangan">Kapasitas</h2>
                     <p class="room-capacity">{{ $room['capacity'] }} orang</p>
+                    <a class="btn btn-primary booking-button mt-3" href="{{ route('borrowings.create', ['ruangan' => $room['slug']]) }}">Pilih ruangan</a>
                     <a class="back-link" href="{{ route('home') }}#ketersediaan">Lihat kalender ketersediaan</a>
                 </section>
             </div>

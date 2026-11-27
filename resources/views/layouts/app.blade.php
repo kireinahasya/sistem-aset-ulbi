@@ -21,6 +21,10 @@
             <nav aria-label="Navigasi utama">
                 <a class="back-link" href="{{ route('rooms.index') }}"
                     @if (request()->routeIs('rooms.index')) aria-current="page" @endif>Katalog ruangan</a>
+                <a class="back-link" href="{{ route('equipment.index') }}"
+                    @if (request()->routeIs('equipment.index')) aria-current="page" @endif>Sarana tambahan</a>
+                <a class="back-link" href="{{ route('borrowings.create') }}"
+                    @if (request()->routeIs('borrowings.create')) aria-current="page" @endif>Peminjaman</a>
                 <a class="back-link" href="{{ route('login') }}"
                     @if (request()->routeIs('login')) aria-current="page" @endif>Masuk</a>
             </nav>

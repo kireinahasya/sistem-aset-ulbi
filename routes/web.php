@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BorrowingController;
+use App\Http\Controllers\EquipmentCatalogController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RoomCatalogController;
 use Illuminate\Support\Facades\Route;
@@ -39,4 +41,6 @@ Route::view('/daftar', 'auth.register')->name('register');
 Route::view('/lupa-kata-sandi', 'auth.forgot-password')->name('password.request');
 Route::get('/ruangan', [RoomCatalogController::class, 'index'])->name('rooms.index');
 Route::get('/ruangan/{room}', [RoomCatalogController::class, 'show'])->name('rooms.show');
+Route::get('/sarana', EquipmentCatalogController::class)->name('equipment.index');
+Route::get('/peminjaman/baru', [BorrowingController::class, 'create'])->name('borrowings.create');
 Route::view('/jadwal-stok', 'availability', $availabilityDemo)->name('availability');

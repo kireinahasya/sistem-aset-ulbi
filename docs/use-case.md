@@ -62,4 +62,6 @@ Best-Fit mengurutkan ruang yang memenuhi kebutuhan berdasarkan sisa kapasitas pa
 
 ## Cakupan implementasi saat ini
 
-Beranda, kalender, pencarian rekomendasi, katalog dan detail ruangan, serta contoh bentrok jadwal dan stok kurang sudah tersedia dengan data demo. Tampilan registrasi, login Peminjam dan Admin, serta pemulihan kata sandi tersedia dengan validasi di browser. Autentikasi akun, penyimpanan data registrasi, pengiriman email, katalog sarana, pengajuan dan riwayat, serta halaman Admin Logistik masih menjadi tahap pengembangan berikutnya.
+Beranda, kalender, rekomendasi, katalog dan detail ruangan, katalog sarana, serta contoh bentrok jadwal dan stok kurang tersedia dengan data contoh. Formulir peminjaman menyediakan pilihan ruangan dan/atau sarana, lampiran PDF opsional, pemeriksaan isian, dan ringkasan yang dapat diubah. Jadwal ruang memakai data mingguan contoh, sedangkan stok sarana memakai jumlah tersedia tetap.
+
+Tampilan registrasi, login Peminjam/Admin, dan pemulihan kata sandi tersedia dengan validasi di browser. Autentikasi, penyimpanan akun dan pengajuan, unggah dokumen ke server, email, riwayat, serta halaman Admin Logistik menjadi tahap pengembangan berikutnya.
