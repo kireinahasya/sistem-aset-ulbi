@@ -39,6 +39,7 @@ Route::get('/', HomeController::class)->name('home');
 Route::view('/masuk', 'auth.login')->name('login');
 Route::view('/daftar', 'auth.register')->name('register');
 Route::view('/lupa-kata-sandi', 'auth.forgot-password')->name('password.request');
+Route::view('/reset-kata-sandi', 'auth.reset-password')->name('password.reset');
 Route::get('/ruangan', [RoomCatalogController::class, 'index'])->name('rooms.index');
 Route::get('/ruangan/{room}', [RoomCatalogController::class, 'show'])->name('rooms.show');
 Route::get('/sarana', EquipmentCatalogController::class)->name('equipment.index');
