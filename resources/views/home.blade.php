@@ -7,7 +7,7 @@
         <section class="hero row align-items-center gy-4 gx-lg-5" aria-labelledby="judul-halaman">
             <div class="col-lg-7">
                 <h1 id="judul-halaman">Cek ketersediaan ruang dan sarana</h1>
-                <p>Pilih tanggal untuk melihat slot kosong atau cari ruang berdasarkan kapasitas dan fasilitas.</p>
+                <p>Cari ruangan sesuai jadwal, kapasitas, dan fasilitas, lalu tambahkan sarana dalam satu pengajuan.</p>
                 <div class="hero-actions">
                     <a class="btn btn-primary" href="#cari-ruangan">Cari ruangan</a>
                     <a class="back-link" href="{{ route('availability') }}">Lihat jadwal dan stok</a>

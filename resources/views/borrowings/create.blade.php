@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
-@section('title', 'Formulir peminjaman | Sistem Aset ULBI')
+@section('title', 'Peminjaman ruangan dan sarana | Sistem Aset ULBI')
 
 @section('content')
     <div class="container-xl availability-page">
         <header class="availability-heading availability-page-heading">
-            <h1>Formulir peminjaman</h1>
+            <h1>Peminjaman ruangan dan sarana</h1>
         </header>
-        <p class="catalog-intro">Lengkapi jadwal dan kebutuhan aset untuk meninjau pengajuan.</p>
+        <p class="catalog-intro">Gabungkan ruangan pilihan dan sarana tambahan dalam satu pengajuan dengan jadwal penggunaan yang sama.</p>
 
         <div class="booking-layout">
             <div>
@@ -15,6 +15,47 @@
                     action="{{ route('borrowings.create') }}" enctype="multipart/form-data" novalidate>
                     @csrf
                     <p class="search-errors" id="booking-errors" role="alert" hidden>Periksa kembali isian yang ditandai.</p>
+                    <fieldset class="booking-section" id="aset-peminjaman" tabindex="-1">
+                        <legend>Ruangan</legend>
+                        <label class="form-label" for="ruangan">Pilihan ruangan</label>
+                        <select class="form-select" id="ruangan" name="ruangan" aria-describedby="room-info error-ruangan">
+                            <option value="">Tanpa ruangan</option>
+                            @foreach ($rooms as $room)
+                                <option value="{{ $room['slug'] }}" @selected(($initial['ruangan'] ?? '') === $room['slug'])
+                                    data-capacity="{{ $room['capacity'] }}"
+                                    data-facilities="{{ implode(' · ', array_map(fn ($code) => $facilityLabels[$code], $room['facilities'])) }}"
+                                    data-details="{{ route('rooms.show', $room['slug']) }}">{{ $room['name'] }} - {{ $room['capacity'] }} orang</option>
+                            @endforeach
+                        </select>
+                        <p class="asset-detail" id="room-info"></p>
+                        <span class="auth-error" id="error-ruangan"></span>
+                        <a class="back-link" id="room-details" hidden>Lihat fasilitas ruangan</a>
+                    </fieldset>
+
+                    <fieldset class="booking-section">
+                        <legend>Sarana tambahan</legend>
+                        <p class="asset-detail mb-2">Tambahkan perlengkapan untuk kegiatan di ruangan pilihan Anda. Semua sarana akan digabungkan dalam pengajuan ini.</p>
+                        <div class="equipment-quantities">
+                            @foreach ($equipment as $item)
+                                <div class="equipment-quantity">
+                                    <div>
+                                        <label class="form-label" for="sarana-{{ $item['slug'] }}">{{ $item['name'] }}</label>
+                                        <p class="asset-detail">{{ $item['available'] }} {{ $item['unit'] }} tersedia</p>
+                                    </div>
+                                    <div>
+                                        <input class="form-control" id="sarana-{{ $item['slug'] }}" name="sarana[{{ $item['slug'] }}]"
+                                            type="number" min="0" max="{{ $item['available'] }}" step="1"
+                                            data-equipment data-label="{{ $item['name'] }}" data-unit="{{ $item['unit'] }}"
+                                            aria-describedby="error-sarana-{{ $item['slug'] }}"
+                                            value="{{ ($initial['sarana'] ?? '') === $item['slug'] && $item['available'] > 0 ? 1 : 0 }}"
+                                            @disabled($item['available'] === 0)>
+                                        <span class="auth-error" id="error-sarana-{{ $item['slug'] }}"></span>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </fieldset>
+
                     <fieldset class="booking-section">
                         <legend>Penanggung jawab</legend>
                         <div class="booking-fields">
@@ -83,47 +124,6 @@
                     </fieldset>
 
                     <fieldset class="booking-section">
-                        <legend>Ruangan</legend>
-                        <label class="form-label" for="ruangan">Pilihan ruangan</label>
-                        <select class="form-select" id="ruangan" name="ruangan" aria-describedby="room-info error-ruangan">
-                            <option value="">Tanpa ruangan</option>
-                            @foreach ($rooms as $room)
-                                <option value="{{ $room['slug'] }}" @selected(($initial['ruangan'] ?? '') === $room['slug'])
-                                    data-capacity="{{ $room['capacity'] }}"
-                                    data-facilities="{{ implode(' · ', array_map(fn ($code) => $facilityLabels[$code], $room['facilities'])) }}"
-                                    data-details="{{ route('rooms.show', $room['slug']) }}">{{ $room['name'] }} - {{ $room['capacity'] }} orang</option>
-                            @endforeach
-                        </select>
-                        <p class="asset-detail" id="room-info"></p>
-                        <span class="auth-error" id="error-ruangan"></span>
-                        <a class="back-link" id="room-details" hidden>Lihat fasilitas ruangan</a>
-                    </fieldset>
-
-                    <fieldset class="booking-section">
-                        <legend>Sarana tambahan</legend>
-                        <p class="asset-detail mb-2">Isi jumlah unit yang diperlukan. Pilih ruangan dan/atau minimal satu sarana.</p>
-                        <div class="equipment-quantities">
-                            @foreach ($equipment as $item)
-                                <div class="equipment-quantity">
-                                    <div>
-                                        <label class="form-label" for="sarana-{{ $item['slug'] }}">{{ $item['name'] }}</label>
-                                        <p class="asset-detail">{{ $item['available'] }} {{ $item['unit'] }} tersedia</p>
-                                    </div>
-                                    <div>
-                                        <input class="form-control" id="sarana-{{ $item['slug'] }}" name="sarana[{{ $item['slug'] }}]"
-                                            type="number" min="0" max="{{ $item['available'] }}" step="1"
-                                            data-equipment data-label="{{ $item['name'] }}" data-unit="{{ $item['unit'] }}"
-                                            aria-describedby="error-sarana-{{ $item['slug'] }}"
-                                            value="{{ ($initial['sarana'] ?? '') === $item['slug'] && $item['available'] > 0 ? 1 : 0 }}"
-                                            @disabled($item['available'] === 0)>
-                                        <span class="auth-error" id="error-sarana-{{ $item['slug'] }}"></span>
-                                    </div>
-                                </div>
-                            @endforeach
-                        </div>
-                    </fieldset>
-
-                    <fieldset class="booking-section">
                         <legend>Dokumen dan catatan</legend>
                         <label class="form-label" for="attachment">Surat permohonan / izin kegiatan (opsional)</label>
                         <input class="form-control" id="attachment" name="attachment" type="file" accept=".pdf,application/pdf"
@@ -140,7 +140,7 @@
 
                 <section class="availability-panel booking-form" id="booking-review" aria-labelledby="review-title" tabindex="-1" hidden>
                     <h2 id="review-title">Ringkasan pengajuan</h2>
-                    <p class="asset-detail">Periksa kembali jadwal, aset, dan jumlah yang Anda pilih.</p>
+                    <p class="asset-detail">Ruangan dan seluruh sarana di bawah ini tercakup dalam satu pengajuan dengan jadwal yang sama.</p>
                     <dl class="review-values" id="review-values"></dl>
                     <p class="booking-review-notice">Masuk ke akun untuk melanjutkan pengiriman pengajuan kepada Admin Logistik.</p>
                     <div class="booking-actions">

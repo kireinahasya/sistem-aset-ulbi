@@ -121,7 +121,7 @@ Untuk mencoba rekomendasi, pilih **17 November 2026**, pukul **11.00–12.00 WIB
 
 Pada halaman masuk, pilih peran dan isi email serta kata sandi. Pada registrasi, lengkapi identitas dan konfirmasi kata sandi. Formulir memvalidasi isian di browser. Setelah isian valid, pesan status menjelaskan bahwa layanan akun belum tersedia. Formulir memproses data di halaman tersebut. Autentikasi dan pembuatan akun menjadi tahap implementasi berikutnya.
 
-Dari detail ruangan, klik **Pilih ruangan**. Dari katalog sarana, klik **Pilih sarana**. Isian ruangan atau sarana langsung terbawa ke formulir. Pilihan dari hasil rekomendasi juga membawa tanggal, jam, dan jumlah peserta.
+Dari detail ruangan, klik **Pinjam ruangan dan sarana**. Dari katalog sarana, klik **Pilih sarana**. Isian ruangan atau sarana langsung terbawa ke formulir. Ruangan dan seluruh sarana tambahan dipilih dalam satu formulir, memakai satu jadwal, dan ditinjau dalam satu ringkasan pengajuan. Pilihan dari hasil rekomendasi juga membawa tanggal, jam, dan jumlah peserta.
 
 Klik **Periksa pengajuan** untuk memeriksa kelengkapan isian, kapasitas, bentrok jadwal ruang, stok sarana, serta format dan ukuran PDF. Dokumen bersifat opsional dan dibatasi 5 MB pada antarmuka. Ketentuan ini masih dapat disesuaikan dengan prosedur Logistik ULBI.
 

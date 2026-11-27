@@ -62,7 +62,7 @@
             @if ($recommendations === [])
                 <p class="asset-detail">Tidak ada ruangan yang cocok. Coba ganti jam, jumlah peserta, atau fasilitas.</p>
             @else
-                <p class="asset-detail">Diurutkan dari sisa kursi paling sedikit.</p>
+                <p class="asset-detail">Rekomendasi Best-Fit diurutkan dari sisa kursi paling sedikit. Pilih ruangan untuk menambahkan sarana pada pengajuan yang sama.</p>
                 <ol>
                     @foreach ($recommendations as $room)
                         <li>
@@ -75,7 +75,7 @@
                                 'jam_mulai' => $form['jam_mulai'],
                                 'jam_selesai' => $form['jam_selesai'],
                                 'jumlah_peserta' => $form['jumlah_peserta'],
-                            ]) }}">Pilih ruangan ini</a>
+                            ]) }}#aset-peminjaman">Pilih ruangan dan sarana</a>
                         </li>
                     @endforeach
                 </ol>
