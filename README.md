@@ -43,9 +43,9 @@ Peminjam dapat mengajukan ruangan dan/atau sarana tambahan sesuai waktu serta ju
 | Rekomendasi | Cari berdasarkan waktu, kapasitas, dan fasilitas, lalu urutkan dengan Best-Fit | Tersedia dengan data contoh |
 | Katalog ruangan | Lihat kapasitas dan buka detail fasilitas bawaan | Tersedia dengan data contoh |
 | Contoh keadaan khusus | Jadwal bentrok, stok kurang, validasi pencarian, dan hasil pencarian kosong | Tersedia dengan data contoh |
-| Akun | Registrasi Peminjam, login berdasarkan peran, dan pemulihan kata sandi | Direncanakan |
-| Katalog sarana | Lihat jenis sarana, stok, dan kondisi | Direncanakan |
-| Pengajuan | Formulir kegiatan, waktu, aset, jumlah unit, dan lampiran | Direncanakan |
+| Akun | Registrasi Peminjam, login Peminjam/Admin, dan pemulihan kata sandi | Tampilan dan validasi browser tersedia. Formulir menampilkan status layanan belum tersedia setelah isian valid. Autentikasi, penyimpanan akun, dan pengiriman email direncanakan. |
+| Katalog sarana | Lihat jenis sarana, stok, kondisi, dan pilih sarana untuk formulir peminjaman | Tersedia dengan data contoh |
+| Pengajuan | Formulir penanggung jawab, kegiatan, waktu, ruangan, sarana, dan lampiran PDF opsional | Formulir, validasi di browser, dan ringkasan tersedia. Pengiriman serta penyimpanan pengajuan direncanakan. |
 | Status dan riwayat | Pantau keputusan dan peminjaman sendiri, baca alasan penolakan, serta ajukan kembali | Direncanakan |
 | Notifikasi website | Pemberitahuan keputusan pengajuan dan tautan ke detailnya | Direncanakan |
 | Admin | Dasbor, kelola aset, persetujuan, penyerahan, dan pengembalian beserta kondisi | Direncanakan |
@@ -108,11 +108,24 @@ Jika proyek sudah tersiapkan, jalankan `php artisan serve` dari folder proyek, l
 | Halaman | Alamat lokal |
 | --- | --- |
 | Beranda, kalender, dan pencarian | http://127.0.0.1:8000 |
+| Login Peminjam atau Admin | http://127.0.0.1:8000/masuk |
+| Registrasi Peminjam | http://127.0.0.1:8000/daftar |
+| Pemulihan kata sandi | http://127.0.0.1:8000/lupa-kata-sandi |
 | Katalog ruangan | http://127.0.0.1:8000/ruangan |
+| Katalog sarana | http://127.0.0.1:8000/sarana |
+| Formulir peminjaman | http://127.0.0.1:8000/peminjaman/baru |
 | Contoh detail Ruang D | http://127.0.0.1:8000/ruangan/ruang-d |
 | Contoh bentrok jadwal dan stok kurang | http://127.0.0.1:8000/jadwal-stok |
 
 Untuk mencoba rekomendasi, pilih **17 November 2026**, pukul **11.00–12.00 WIB**, untuk **35 peserta**, dengan fasilitas **AC dan proyektor**. Ruang A muncul pertama dengan sisa kapasitas 5 kursi.
+
+Pada halaman masuk, pilih peran dan isi email serta kata sandi. Pada registrasi, lengkapi identitas dan konfirmasi kata sandi. Formulir memvalidasi isian di browser. Setelah isian valid, pesan status menjelaskan bahwa layanan akun belum tersedia. Formulir memproses data di halaman tersebut. Autentikasi dan pembuatan akun menjadi tahap implementasi berikutnya.
+
+Dari detail ruangan, klik **Pinjam ruangan dan sarana**. Dari katalog sarana, klik **Pilih sarana**. Isian ruangan atau sarana langsung terbawa ke formulir. Ruangan dan seluruh sarana tambahan dipilih dalam satu formulir, memakai satu jadwal, dan ditinjau dalam satu ringkasan pengajuan. Pilihan dari hasil rekomendasi juga membawa tanggal, jam, dan jumlah peserta.
+
+Klik **Periksa pengajuan** untuk memeriksa kelengkapan isian, kapasitas, bentrok jadwal ruang, stok sarana, serta format dan ukuran PDF. Dokumen bersifat opsional dan dibatasi 5 MB pada antarmuka. Ketentuan ini masih dapat disesuaikan dengan prosedur Logistik ULBI.
+
+Ringkasan dapat dibuka dan diperbaiki melalui **Ubah isian**. Tautan **Masuk untuk mengirim** membuka halaman login. Formulir saat ini memproses isian serta metadata lampiran di browser. Penyimpanan dan pengiriman pengajuan, pengunggahan lampiran ke server, serta pemeriksaan stok sarana berdasarkan transaksi per waktu akan diterapkan pada tahap backend. Stok sarana memakai jumlah tersedia contoh yang tetap.
 
 ## Dokumentasi rancangan
 
@@ -124,8 +137,6 @@ Dokumen berikut tersedia di cabang pengembangan.
 
 ## Tahap pengembangan berikutnya
 
-1. Menyusun tampilan registrasi dan login Peminjam serta login Admin.
-2. Melengkapi katalog sarana dan formulir peminjaman dengan contoh validasi dan lampiran.
-3. Membuat status, riwayat, alasan penolakan, dan notifikasi website.
-4. Melengkapi halaman Admin Logistik dan laporan.
-5. Memeriksa alur prototipe di laptop dan ponsel sebelum melanjutkan implementasi transaksi menggunakan MySQL.
+1. Membuat status, riwayat, alasan penolakan, dan notifikasi website.
+2. Melengkapi halaman Admin Logistik dan laporan.
+3. Memeriksa alur prototipe di laptop dan ponsel sebelum melanjutkan implementasi transaksi menggunakan MySQL.
